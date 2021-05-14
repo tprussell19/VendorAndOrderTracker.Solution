@@ -4,37 +4,31 @@ using System.Collections.Generic;
 
 namespace VendorAndOrderTracker.Controllers
 {
-  public class ItemsController : Controller
+  public class OrdersController : Controller
   {
 
-    [HttpGet("/items/new")]
-    public ActionResult CreateForm()
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
     {
-      return View();
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
 
-    [HttpPost("/items")]
-    public ActionResult Create(string description)
-    {
-      Item myItem = new Item(description);
-      return RedirectToAction("Index");
-    }
-
-    [HttpPost("/items/delete")]
+    [HttpPost("/orders/delete")]
     public ActionResult DeleteAll()
     {
-      Item.ClearAll();
+      Order.ClearAll();
       return View();
     }
 
-    [HttpGet("/categories/{categoryId}/items/{itemId}")]
-    public ActionResult Show(int categoryId, int itemId)
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId)
     {
-      Item item = Item.Find(itemId);
-      Category category = Category.Find(categoryId);
+      Order order = Order.Find(orderId);
+      Vendor vendor = Vendor.Find(vendorId);
       Dictionary<string, object> model = new Dictionary<string, object>();
-      model.Add("item", item);
-      model.Add("category", category);
+      model.Add("order", order);
+      model.Add("vendor", vendor);
       return View(model);
     }
   }

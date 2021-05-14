@@ -109,5 +109,21 @@ namespace VendorAndOrderTracker.Tests
       Assert.AreEqual(updatedDescription, result);
     }
 
+    [TestMethod]
+    public void SetPrice_SetPrice_Int()
+    {
+      //Arrange
+      int price = 0;
+      Order newOrder = new Order("", "", price, "");
+
+      //Act
+      int updatedPrice = 5;
+      newOrder.Price = updatedPrice;
+      int result = newOrder.Price;
+
+      //Assert
+      Assert.AreEqual(updatedPrice, result);
+    }
+
   }
 }

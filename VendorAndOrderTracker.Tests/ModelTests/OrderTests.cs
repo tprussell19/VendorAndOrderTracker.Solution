@@ -63,5 +63,19 @@ namespace VendorAndOrderTracker.Tests
       Assert.AreEqual(price, result);
     }
 
+    [TestMethod]
+    public void GetDate_ReturnsDate_String()
+    {
+      //Arrange
+      string date = "test date";
+      Order newOrder = new Order("", "", 0, date);
+
+      //Act
+      string result = newOrder.Date;
+
+      //Assert
+      Assert.AreEqual(date, result);
+    }
+
   }
 }

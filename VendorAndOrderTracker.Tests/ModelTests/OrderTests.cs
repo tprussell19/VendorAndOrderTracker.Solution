@@ -125,5 +125,21 @@ namespace VendorAndOrderTracker.Tests
       Assert.AreEqual(updatedPrice, result);
     }
 
+    [TestMethod]
+    public void SetDate_SetDate_String()
+    {
+      //Arrange
+      string date = "5/14/21";
+      Order newOrder = new Order("", "", 0, date);
+
+      //Act
+      string updatedDate = "5/15/21";
+      newOrder.Date = updatedDate;
+      string result = newOrder.Date;
+
+      //Assert
+      Assert.AreEqual(updatedDate, result);
+    }
+
   }
 }

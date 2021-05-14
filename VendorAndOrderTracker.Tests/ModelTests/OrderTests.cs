@@ -14,7 +14,12 @@ namespace VendorAndOrderTracker.Tests
       Order.ClearAll();
     }
 
-
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("test Title", "test Description", 5, "5/14/21");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
 
   }
 }

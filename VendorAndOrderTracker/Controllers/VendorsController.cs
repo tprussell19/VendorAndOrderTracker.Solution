@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using VendorAndOrderTracker.Models;
 
-namespace ToDoList.Controllers
+namespace VendorAndOrderTracker.Controllers
 {
   public class CategoriesController : Controller
   {

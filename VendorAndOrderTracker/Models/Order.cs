@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ToDoList.Models
+namespace VendorAndOrderTracker.Models
 {
   public class Item
   {

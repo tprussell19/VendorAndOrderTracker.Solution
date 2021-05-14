@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ToDoList.Models;
+using VendorAndOrderTracker.Models;
 using System.Collections.Generic;
 using System;
 
-namespace ToDoList.Tests
+namespace VendorAndOrderTracker.Tests
 {
   [TestClass]
   public class CategoryTests : IDisposable

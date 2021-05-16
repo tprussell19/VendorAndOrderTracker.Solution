@@ -12,11 +12,13 @@
 }
 else
 {
-  <p>Click an order for more details:</p>
+  <h3>Click an order for more details:</h3>
   <ol>
   @foreach (Order order in @Model["orders"])
     {
-      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
+      <li>
+        <h5><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></h5>
+      </li>
     }
   </ol>
 }

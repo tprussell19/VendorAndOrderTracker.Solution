@@ -1,28 +1,43 @@
-@{
-  Layout = "_Layout";
-}
+<!DOCTYPE html>
+<html lang="en-US">
 
-@using VendorAndOrderTracker.Models;
+<head>
+  <meta charset="utf-8">
+  <title>Pierre's Vendor and Order Tracker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="VendorAndOrderTracker.Solution/VendorAndOrderTracker/wwwroot/css/styles.css">
+</head>
 
-<h1 class="jumbotron">Here are all the orders for @Model["vendor"].Name:</h1>
+<body>
+  <div class="container">
 
-@if (@Model["orders"].Count == 0)
-{
-  <h3>No orders have been added yet!</h3>
-}
-else
-{
-  <h3>Click an order for more details:</h3>
-  <ol>
-  @foreach (Order order in @Model["orders"])
+    @using VendorAndOrderTracker.Models;
+
+    <h1 class="jumbotron">Here are all the orders for @Model["vendor"].Name:</h1>
+
+    @if (@Model["orders"].Count == 0)
     {
-      <li>
-        <h5><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></h5>
-      </li>
+      <h3>No orders have been added yet!</h3>
     }
-  </ol>
-}
+    else
+    {
+      <h3>Click an order for more details:</h3>
+      <ol>
+        @foreach (Order order in @Model["orders"])
+        {
+          <li>
+            <h5><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></h5>
+          </li>
+        }
+      </ol>
+    }
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-<p><a href='/vendors'>Return to vendor list</a></p>
-<p><a href='/'>Return to Main Page</a></p>
+    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+    <p><a href='/vendors'>Return to vendor list</a></p>
+    <p><a href='/'>Return to Main Page</a></p>
+
+  </div>
+</body>
+
+</html>

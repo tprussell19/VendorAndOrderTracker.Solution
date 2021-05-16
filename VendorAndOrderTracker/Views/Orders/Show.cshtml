@@ -4,21 +4,28 @@
 
 <h1 class="jumbotron">Order Details: </h1>
 
-<h2>Order Number: @Model["order"].Title</h2>
-<ul>
-  <li>
-    <h3>Description: @Model["order"].Description</h3>
-  </li>
-  <li>
-    <h3>Price: $@Model["order"].Price</h3>
-  </li>
-  <li>
-    <h3>Date: @Model["order"].Date</h3>
-  </li>
-  <li>
-    <h3>Vendor: <a href='/vendors/@Model["vendor"].Id'>@Model["vendor"].Name</a></h3>
-  </li>
-</ul>
-
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Order Number: @Model["order"].Title</h2>
+        <ul class="card-text">
+          <li>
+            <h3>Description: @Model["order"].Description</h3>
+          </li>
+          <li>
+            <h3>Price: $@Model["order"].Price</h3>
+          </li>
+          <li>
+            <h3>Date: @Model["order"].Date</h3>
+          </li>
+          <li>
+            <h3>Vendor: <a href='/vendors/@Model["vendor"].Id'>@Model["vendor"].Name</a></h3>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
 <p><a href='/vendors'>View all vendors</a></p>

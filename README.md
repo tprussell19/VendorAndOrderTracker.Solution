@@ -1,49 +1,54 @@
-# _{Application Name}_
+# _Pierre's Vendor and Order Tracker_
 
-#### _{Brief description of application}_
+#### _An MVC bakery orders application_
 
 #### By _Thomas Russell_
 
 ## Technologies Used
 
-- _HTML_ 📝
-- _CSS_ 🎨
-- _Javascript_ ☕
-- _Node_ 🧭
-- _Webpack_ 🕸
-- _Bootstrap_ 🥾
-- _C#_ #️⃣
+- _C#_
+- _ASP.NET Core_
+- _Razor_
+- _CSS_
+- _Bootstrap_
+- _Markdown_
 
-## Description 📜
+## Description
 
-\_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}
+_This is a C#/ASP.NET Core application that allows a baker named Pierre to keep track of all of his orders and their details. The orders are sorted by vendor who made the order. Each vendor has a name and description and each order has an order number/title, description, price, and date._
 
-### Prerequisites 💻
+## Setup and Use
 
-- [Node](https://nodejs.org/en/)
+### Prerequisites
+
+- [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 - A text editor like [VS Code](https://code.visualstudio.com/)
+- A command line interface like Terminal or GitBash to run and interact with the console app.
 
-## Setup/Installation Requirements 🏗
+### Installation
 
-1. Clone the repository: `$ git clone https://github.com/account/my-project`
-2. Navigate to the `my-project/` directory on your computer
+1. Clone the repository: `$ git clone https://github.com/tprussell19/VendorAndOrderTracker.Solution`
+2. Navigate to the `VendorAndOrderTracker.Solution/` directory on your computer
 3. Open with your preferred text editor to view the code base
-4. To start a development server and view the project in the browser:
-   - _Navigate to `my-project/` in your command line_
-   - _Run the command `npm install` to install dependencies_
-   - _Optionally, run the commmand `npm run build` to make a bundle of the files_
-   - _Finally, run the command `npm run start` to start a development server_
-5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
+4. To run the console app:
+   - Navigate to `VendorAndOrderTracker.Solution/VendorAndOrderTracker` in your command line
+   - Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
+   - Run the commmand `dotnet build` to build the project and its dependencies into a set of binaries
+   - Finally, run the command `dotnet run` to run the project!
+   - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app
+5. To run tests:
+   - Navigate to `VendorAndOrderTracker.Solution/VendorAndOrderTracker.Tests` in your command line.
+   - Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
+   - Finally, run the command `dotnet test` to run the tests!
 
-## Known Bugs 🐛
+## Known Bugs
 
-- _Any known issues_
-- _should go here_
+- _No known bugs_
 
-## License ⚖
+## License
 
 _MIT © Thomas Russell 2021_
 
-## Contact Information 🤳
+## Contact Information
 
 Thomas Russell _t.p.russell19@gmail.com_
